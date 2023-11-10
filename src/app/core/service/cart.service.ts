@@ -62,7 +62,7 @@ export class CartService {
   calcularTotal(){
     let subtotal = 0;
     this.carrito.forEach(item => {
-      subtotal = subtotal+item.producto.precio
+      subtotal = subtotal+item.producto.precio * item.cantidad
     })
     this.totalCarrito = subtotal;
   }
